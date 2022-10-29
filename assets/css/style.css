@@ -8,6 +8,7 @@
     /*========== Colors ==========*/
     /*Color mode HSL(hue, saturation, lightness)*/
     --main-color: hsl(234, 76%, 20%);
+    --main-color-alt: hsl(234, 76%, 16%);
     --gray-color: hsl(222, 22%, 58%);
 
     /*========== Font and typography ==========*/
