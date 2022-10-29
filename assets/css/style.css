@@ -9,6 +9,7 @@
     /*Color mode HSL(hue, saturation, lightness)*/
     --main-color: hsl(234, 76%, 20%);
     --gray-color: hsl(222, 22%, 58%);
+    --blue-color: hsl(256, 82%, 49%);
 
     /*========== Font and typography ==========*/
     /*.5rem = 8px | 1rem = 16px ...*/
@@ -29,6 +30,7 @@
     --font-bold: 700;
 
     /*========== z index ==========*/
+    --z-back: -1;
     --z-tooltip: 10;
     --z-fixed: 100;
 }
@@ -63,11 +65,10 @@ img {
     height: auto;
 }
 
-
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
     max-width: 1124px;
-    margin: 0 auto;
+    margin: 0 1.5rem;
 }
 
 .grid {
@@ -89,9 +90,8 @@ img {
 
 /* === BUTTONS === */
 .btn-primary {
-    background: hsl(256, 82%, 49%);
+    background: var(--blue-color);
     color: hsl(0, 0%, 100%);
-    border-radius: .5rem;
 }
 
 .btn-primary:hover {
@@ -101,11 +101,10 @@ img {
 .btn-secondary {
     background: hsl(227, 41%, 93%);
     color: var(--main-color);
-    border-radius: .5rem;
 }
 
 .btn-secondary:hover {
-    background: hsl(256, 82%, 49%);
+    background: var(--blue-color);
     color: hsl(0, 0%, 100%);
 }
 
@@ -116,4 +115,81 @@ img {
 
 .btn-link:hover {
     text-decoration: none;
+}
+
+/*=============== HEADER ===============*/
+.header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: hsl(0, 0%, 100%);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--header-height);
+}
+
+.nav__logo img {
+    max-width: 44px;
+}
+
+
+@media screen and (max-width: 1023px) {
+    .nav__menu {
+        position: absolute;
+        padding-bottom: .5rem;
+        top: 100%;
+        transform: scaleY(0);
+        transform-origin: top;
+        left: 0;
+        width: 100%;
+        border-radius: 0 0 1rem 1rem;
+        box-shadow: 0 5px 5px hsla(234, 76%, 20%, .1);
+        transition: .3s;
+        z-index: -1;
+    }
+
+    .nav__item {
+        width: 100%;
+        padding: .5rem 1.5rem;
+    }
+
+    .nav__link {
+        color: var(--main-color);
+    }
+}
+
+.nav__link:hover {
+    color: var(--blue-color);
+}
+
+.nav__buttons {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+.nav__toggle {
+    font-size: var(--h2-font-size);
+    cursor: pointer;
+}
+
+.nav__toggle:hover {
+    color: var(--blue-color);
+}
+
+.nav__btn {
+    padding: .5rem 1rem;
+    border-radius: 2.5rem;
+    font-size: var(--small-font-size);
+}
+
+/* === ACTIVE MENU === */
+.active-menu {
+    transform: scaleY(1);
+    transform-origin: bottom;
 }
