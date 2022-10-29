@@ -8,7 +8,6 @@
     /*========== Colors ==========*/
     /*Color mode HSL(hue, saturation, lightness)*/
     --main-color: hsl(234, 76%, 20%);
-    --main-color-alt: hsl(234, 76%, 16%);
     --gray-color: hsl(222, 22%, 58%);
 
     /*========== Font and typography ==========*/
@@ -95,7 +94,9 @@ img {
     border-radius: .5rem;
 }
 
-.btn-primary:hover {}
+.btn-primary:hover {
+    background-color: hsl(256, 82%, 45%);
+}
 
 .btn-secondary {
     background: hsl(227, 41%, 93%);
