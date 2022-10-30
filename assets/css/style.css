@@ -150,7 +150,7 @@ img {
         border-radius: 0 0 1rem 1rem;
         box-shadow: 0 5px 5px hsla(234, 76%, 20%, .1);
         transition: .3s;
-        z-index: -1;
+        background-color: hsl(0, 0%, 100%);
     }
 
     .nav__item {
