@@ -15,7 +15,7 @@
     /*.5rem = 8px | 1rem = 16px ...*/
     --body-font: 'Poppins', sans-serif;
 
-    --biggest-font-size: 2.25rem;
+    --biggest-font-size: 2rem;
     --h1-font-size: 1.5rem;
     --h2-font-size: 1.25rem;
     --h3-font-size: 1rem;
@@ -110,7 +110,7 @@ img {
 
 .btn-link {
     color: var(--main-color);
-    text-decoration-color: var(--main-color);
+    text-decoration: underline var(--main-color);
 }
 
 .btn-link:hover {
@@ -192,4 +192,34 @@ img {
 .active-menu {
     transform: scaleY(1);
     transform-origin: bottom;
+}
+
+/*=============== HOME ===============*/
+.home {
+    padding-top: var(--header-height);
+    height: calc(100vh - var(--header-height) - 6rem);
+}
+
+.home__title {
+    font-size: var(--biggest-font-size);
+    margin-bottom: .85rem;
+}
+
+.home__description {
+    margin-bottom: 2rem;
+}
+
+.home__buttons {
+    display: flex;
+    flex-direction: column;
+    row-gap: .85rem;
+    align-items: center;
+}
+
+.home__btn {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: .5rem 0;
+    border-radius: 2.5rem;
 }
