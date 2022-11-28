@@ -274,3 +274,20 @@ img {
     max-width: 24ch;
     margin-top: .5rem;
 }
+
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+    width: .65rem;
+    border-radius: .5rem;
+    background-color: hsla(234, 76%, 20%, .2);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+    background-color: hsl(234, 76%, 20%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(234, 76%, 30%);
+
+}
