@@ -224,6 +224,26 @@ img {
     border-radius: 2.5rem;
 }
 
+.mouse-scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 1.5rem;
+    font-size: var(--h1-font-size);
+    cursor: pointer;
+    color: var(--main-color);
+    animation: scroll-down 1.5s infinite alternate;
+}
+
+@keyframes scroll-down {
+    0% {
+        transform: translate(-50%, 0);
+    }
+
+    100% {
+        transform: translate(-50%, 5px);
+    }
+}
+
 /*=============== STEPS ===============*/
 .steps__title {
     text-align: center;
