@@ -224,6 +224,7 @@ img {
     border-radius: 2.5rem;
 }
 
+/*=============== MOUSE SCROLL ===============*/
 .mouse-scroll {
     position: absolute;
     left: 50%;
@@ -232,6 +233,11 @@ img {
     cursor: pointer;
     color: var(--main-color);
     animation: scroll-down 1.5s infinite alternate;
+    transition: .5s;
+}
+
+.hide-mouse {
+    opacity: 0;
 }
 
 @keyframes scroll-down {

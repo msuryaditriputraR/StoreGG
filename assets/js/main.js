@@ -7,11 +7,17 @@ navToggle.addEventListener("click", () => {
     navMenu.classList.toggle("active-menu");
 });
 
-/*=============== SHOW SCROLL UP ===============*/
-function scrollUp() {
-    const scrollUp = document.getElementById("scroll-up");
+/*=============== SHOW / HIDE ELEMENT SCROLL UP ===============*/
+function toggleElement(elementId, elementClass) {
+    const element = document.getElementById(elementId);
 
-    scrollUp.classList[this.scrollY >= 200 ? "add" : "remove"]("show-scroll");
+    element.classList[this.scrollY >= 200 ? "add" : "remove"](elementClass);
 }
 
-window.addEventListener("scroll", scrollUp);
+window.addEventListener("scroll", () => {
+    /* === Hide Muse === */
+    toggleElement("mouse-scroll", "hide-mouse");
+
+    /* === Show Scroll === */
+    toggleElement("scroll-up", "show-scroll");
+});
