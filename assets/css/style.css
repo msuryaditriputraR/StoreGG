@@ -157,10 +157,10 @@ img {
         width: 100%;
         padding: .5rem 1.5rem;
     }
+}
 
-    .nav__link {
-        color: var(--main-color);
-    }
+.nav__link {
+    color: var(--main-color);
 }
 
 .nav__link:hover {
@@ -192,6 +192,12 @@ img {
 .active-menu {
     transform: scaleY(1);
     transform-origin: bottom;
+}
+
+/* === ACTIVE LINK === */
+.active-link {
+    text-decoration: line-through;
+    color: var(--blue-color);
 }
 
 /*=============== HOME ===============*/
@@ -226,7 +232,7 @@ img {
 
 /*=============== MOUSE SCROLL ===============*/
 .mouse-scroll {
-    position: absolute;
+    position: fixed;
     left: 50%;
     bottom: 1.5rem;
     font-size: var(--h1-font-size);
