@@ -275,6 +275,102 @@ img {
     margin-top: .5rem;
 }
 
+
+/*=============== DISCOVER ===============*/
+.discover__cards {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(160px, 1fr);
+    overflow-x: auto;
+    margin-block: 1.5rem;
+    column-gap: 1.5rem;
+    /* // Hide ScrollBar */
+    /* FIREFOX */
+    scrollbar-width: none;
+}
+
+.discover__cards::-webkit-scrollbar {
+    /* CHROME & SAFARI */
+    display: none;
+}
+
+.discover__card {
+    position: relative;
+    border-radius: .8rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discover__card:hover {
+    border: 2px solid var(--main-color);
+}
+
+.discover__card>img {
+    transition: .3s;
+    border-radius: .8rem;
+}
+
+.discover__card:hover>img {
+    transform: scale(.9);
+}
+
+.discover__card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, .3);
+    border-radius: .8rem;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: hsl(0, 0%, 100%);
+    padding: 1rem;
+    gap: 1rem;
+    transition: .3s;
+    transform: scale(0);
+}
+
+.discover__card:hover .discover__card-overlay {
+    /* opacity: 1; */
+    transform: scale(.9);
+}
+
+.discover__card-icon {
+    width: 55px;
+    align-self: center;
+}
+
+.discover__card-name {
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.discover__card-plat {
+    opacity: .8;
+}
+
+.discover__infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    margin-block: 3rem;
+}
+
+.discover__info-title {
+    font-size: var(--h2-font-size);
+}
+
+.discover__info-desc {
+    color: var(--gray-color);
+}
+
+
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
     width: .65rem;
