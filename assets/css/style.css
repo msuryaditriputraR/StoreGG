@@ -126,6 +126,10 @@ img {
     background-color: hsl(0, 0%, 100%);
 }
 
+.scroll-header {
+    box-shadow: 0 5px 5px hsla(234, 76%, 20%, .1);
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
