@@ -359,7 +359,8 @@ img {
     align-items: center;
     text-align: center;
     gap: 1.5rem;
-    margin-block: 3rem;
+    margin-block-start: 3rem;
+    margin-block-end: 1.5rem;
 }
 
 .discover__info-title {
@@ -368,6 +369,19 @@ img {
 
 .discover__info-desc {
     color: var(--gray-color);
+}
+
+/*=============== STORY ===============*/
+.story__desc {
+    margin-block-start: 1rem;
+    margin-block-end: 2rem;
+}
+
+.story__btn {
+    display: block;
+    text-align: center;
+    padding-block: .5rem;
+    border-radius: 2.5rem;
 }
 
 
@@ -385,5 +399,4 @@ img {
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: hsl(234, 76%, 30%);
-
 }
