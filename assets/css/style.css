@@ -309,7 +309,6 @@ img {
     grid-auto-flow: column;
     grid-auto-columns: minmax(160px, 1fr);
     overflow-x: auto;
-    justify-content: center;
     margin-block: 1.5rem;
     column-gap: 1.5rem;
     /* // Hide ScrollBar */
@@ -787,6 +786,7 @@ img {
 
     .discover__cards {
         grid-template-columns: repeat(5, 180px);
+        justify-content: center;
     }
 
     .discover__title {
