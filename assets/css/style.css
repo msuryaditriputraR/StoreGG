@@ -786,7 +786,7 @@ img {
     }
 
     .discover__cards {
-        grid-template-columns: repeat(5, 160px);
+        grid-template-columns: repeat(5, 180px);
     }
 
     .discover__title {
