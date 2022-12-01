@@ -309,6 +309,7 @@ img {
     grid-auto-flow: column;
     grid-auto-columns: minmax(160px, 1fr);
     overflow-x: auto;
+    justify-content: center;
     margin-block: 1.5rem;
     column-gap: 1.5rem;
     /* // Hide ScrollBar */
@@ -398,6 +399,10 @@ img {
 }
 
 /*=============== STORY ===============*/
+.story__images {
+    display: none;
+}
+
 .story__desc {
     margin-block-start: 1rem;
     margin-block-end: 2rem;
@@ -717,6 +722,54 @@ img {
         grid-template-columns: repeat(4, max-content);
     }
 
+    .story {
+        grid-template-columns: repeat(2, 1fr);
+        padding-inline: 2.5rem;
+        padding-block: 4.5rem;
+    }
+
+    /* STORY IMAGE */
+    .story__images {
+        display: block;
+        position: relative;
+    }
+
+    .story__image {
+        position: absolute;
+        border-radius: 1.5rem;
+        overflow: hidden;
+        max-width: 350px;
+        right: 0;
+        bottom: 50%;
+        transform: translateY(50%);
+        transition: transform .3s;
+    }
+
+    .story__image:first-child {
+        right: 5%;
+        bottom: 60%;
+        z-index: 3;
+    }
+
+    .story__image:nth-child(2) {
+        z-index: 2;
+        bottom: 55%;
+        right: 2.5%;
+    }
+
+    .story__image:first-child:before {
+        display: none;
+    }
+
+    .story__image::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(255, 255, 255, .3);
+        backdrop-filter: blur(10px);
+        display: var(--displayImage, "initial");
+    }
+
     .footer__container {
         grid-template-columns: repeat(2, max-content);
         justify-content: space-between;
@@ -724,6 +777,20 @@ img {
 
     .footer__content {
         column-gap: 4.5rem;
+    }
+}
+
+@media screen and (min-width: 1054px) {
+    .container {
+        margin-inline: auto;
+    }
+
+    .discover__cards {
+        grid-template-columns: repeat(5, 160px);
+    }
+
+    .discover__title {
+        text-align: center;
     }
 }
 
